@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/how_many_dice"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/how_many_dice"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_dice_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/zai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:checked="false"
+        android:text="@string/zai"
+        android:textSize="30sp"
+        android:layout_toEndOf="@id/how_many_dice"
+        android:layout_above="@id/numOf1"/>
+
+    <TextView
+        android:id="@+id/numOf1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/how_many_dice"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        tools:text="@string/one"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/numOf2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/numOf1"
+        android:layout_below="@id/how_many_dice"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/two"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/numOf3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/numOf2"
+        android:layout_below="@id/how_many_dice"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/three"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/numOf4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/numOf1"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/four"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/numOf5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/numOf4"
+        android:layout_below="@id/numOf1"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/five"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/numOf6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/numOf5"
+        android:layout_below="@id/numOf1"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/six"
+        android:textSize="36sp" />
+
+    <ImageView
+        android:id="@+id/Base"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        app:srcCompat="@drawable/plate" />
+
+    <ImageView
+        android:id="@+id/diceDisplay0"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_alignStart="@id/Base"
+        android:layout_alignTop="@id/Base"
+        app:srcCompat="@drawable/dice_1" />
+    <ImageView
+        android:id="@+id/diceDisplay1"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@id/diceDisplay0"
+        android:layout_alignTop="@id/Base"
+        app:srcCompat="@drawable/dice_2" />
+    <ImageView
+        android:id="@+id/diceDisplay2"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@id/diceDisplay1"
+        android:layout_alignTop="@id/diceDisplay0"
+        app:srcCompat="@drawable/dice_3" />
+    <ImageView
+        android:id="@+id/diceDisplay3"
+        android:layout_width="80dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="8dp"
+        android:layout_alignStart="@id/Base"
+        android:layout_below="@id/diceDisplay0"
+        app:srcCompat="@drawable/dice_4" />
+    <ImageView
+        android:id="@+id/diceDisplay4"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/diceDisplay3"
+        android:layout_below="@id/diceDisplay1"
+        app:srcCompat="@drawable/dice_5" />
+
+    <ImageView
+        android:id="@+id/diceDisplay5"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/diceDisplay4"
+        android:layout_below="@id/diceDisplay2"
+        app:srcCompat="@drawable/dice_1" />
+    <ImageView
+        android:id="@+id/diceDisplay6"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/diceDisplay5"
+        android:layout_below="@id/diceDisplay2"
+        app:srcCompat="@drawable/dice_2" />
+    <ImageView
+        android:id="@+id/diceDisplay7"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@id/diceDisplay3"
+        android:layout_below="@id/diceDisplay4"
+        app:srcCompat="@drawable/dice_3" />
+    <ImageView
+        android:id="@+id/diceDisplay8"
+        android:layout_width="80dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_alignStart="@id/Base"
+        android:layout_below="@id/diceDisplay3"
+        app:srcCompat="@drawable/dice_4" />
+    <ImageView
+        android:id="@+id/diceDisplay9"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@id/diceDisplay7"
+        android:layout_below="@id/diceDisplay5"
+        app:srcCompat="@drawable/dice_5" />
+    <ImageView
+        android:id="@+id/diceDisplay10"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@id/diceDisplay9"
+        android:layout_below="@id/diceDisplay5"
+        app:srcCompat="@drawable/dice_5" />
+    <ImageView
+        android:id="@+id/diceDisplay11"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/diceDisplay8"
+        android:layout_below="@id/diceDisplay7"
+        app:srcCompat="@drawable/dice_5" />
+    <ImageView
+        android:id="@+id/diceDisplay12"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@id/diceDisplay11"
+        android:layout_below="@id/diceDisplay9"
+        app:srcCompat="@drawable/dice_5" />
+
+    <Button
+        android:id="@+id/rollButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Roll"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/Base"
+        />
+
+    <Button
+        android:id="@+id/hideOrCover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Hide/Open"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/rollButton"
+        />
+
+    <ImageView
+        android:id="@+id/cloche"
+        android:layout_width="420dp"
+        android:layout_height="420dp"
+        app:srcCompat="@drawable/empty"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"/>
+
+
+</RelativeLayout>

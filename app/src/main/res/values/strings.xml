@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Liar\'s Dice</string>
+    <string name="how_many_dice">How many dice? (1-13)</string>
+    <string name="one">one: %s</string>
+    <string name="two">two: %s</string>
+    <string name="three">three: %s</string>
+    <string name="four">four: %s</string>
+    <string name="five">five: %s</string>
+    <string name="six">six: %s</string>
+    <string name="zai">zai</string>
+</resources>
