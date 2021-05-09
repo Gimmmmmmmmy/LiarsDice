@@ -8,4 +8,15 @@
     <string name="five">five: %s</string>
     <string name="six">six: %s</string>
     <string name="zai">zai</string>
+    <string name="to_rbsd">to RBSD</string>
+    <string name="to_liar_s">to Liar\'s</string>
+    <string name="red">Red</string>
+    <string name="black">Black</string>
+    <string name="single">single</string>
+    <string name="dbl">Double</string>
+    <string name="big">Big</string>
+    <string name="small">Small</string>
+    <string name="roll">Roll</string>
+    <string name="hide_open">Hide/Open</string>
+    <string name="open">Open</string>
 </resources>

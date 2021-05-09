@@ -22,96 +22,66 @@
             android:layout_height="wrap_content"
             android:inputType="numberDecimal" />
     </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.switchmaterial.SwitchMaterial
-        android:id="@+id/zai"
+    <Button
+        android:id="@+id/red"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:checked="false"
-        android:text="@string/zai"
-        android:textSize="30sp"
-        android:layout_toEndOf="@id/how_many_dice"
-        android:layout_above="@id/numOf1"/>
-
-    <com.google.android.material.switchmaterial.SwitchMaterial
-        android:id="@+id/autoCover"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:checked="false"
-        android:text="Auto\nCover"
-        android:textSize="16sp"
-        android:layout_toEndOf="@id/zai"
-        android:layout_above="@id/numOf1"/>
-
-    <TextView
-        android:id="@+id/numOf1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/red"
         android:layout_alignParentStart="true"
+        android:layout_marginStart="32dp"
         android:layout_below="@id/how_many_dice"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        tools:text="@string/one"
-        android:textSize="36sp" />
-
-    <TextView
-        android:id="@+id/numOf2"
+        />
+    <Button
+        android:id="@+id/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/numOf1"
-        android:layout_below="@id/how_many_dice"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:text="@string/two"
-        android:textSize="36sp" />
-
-    <TextView
-        android:id="@+id/numOf3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/numOf2"
-        android:layout_below="@id/how_many_dice"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:text="@string/three"
-        android:textSize="36sp" />
-
-    <TextView
-        android:id="@+id/numOf4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/black"
         android:layout_alignParentStart="true"
-        android:layout_below="@id/numOf1"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:text="@string/four"
-        android:textSize="36sp" />
-
-    <TextView
-        android:id="@+id/numOf5"
+        android:layout_marginStart="32dp"
+        android:layout_below="@id/red"
+        />
+    <Button
+        android:id="@+id/single"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/numOf4"
-        android:layout_below="@id/numOf1"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:text="@string/five"
-        android:textSize="36sp" />
-
-    <TextView
-        android:id="@+id/numOf6"
+        android:layout_marginTop="8dp"
+        android:text="@string/single"
+        android:layout_toEndOf="@id/red"
+        android:layout_marginStart="32dp"
+        android:layout_below="@id/how_many_dice"
+        />
+    <Button
+        android:id="@+id/dbl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/numOf5"
-        android:layout_below="@id/numOf1"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:text="@string/six"
-        android:textSize="36sp" />
+        android:layout_marginTop="8dp"
+        android:text="@string/dbl"
+        android:layout_toEndOf="@id/black"
+        android:layout_marginStart="32dp"
+        android:layout_below="@id/single"
+        />
+    <Button
+        android:id="@+id/big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/big"
+        android:layout_toEndOf="@id/single"
+        android:layout_marginStart="32dp"
+        android:layout_below="@id/how_many_dice"
+        />
+    <Button
+        android:id="@+id/small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/small"
+        android:layout_toEndOf="@id/dbl"
+        android:layout_marginStart="32dp"
+        android:layout_below="@id/big"
+        />
 
     <ImageView
         android:id="@+id/Base"
@@ -231,7 +201,6 @@
         android:layout_toEndOf="@id/diceDisplay11"
         android:layout_below="@id/diceDisplay9"
         app:srcCompat="@drawable/dice_5" />
-
     <Button
         android:id="@+id/rollButton"
         android:layout_width="wrap_content"
@@ -241,17 +210,24 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/Base"
         />
-
     <Button
-        android:id="@+id/hideOrCover"
+        android:id="@+id/liars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/to_liar_s"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="16dp"/>
+    <Button
+        android:id="@+id/Open"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="@string/hide_open"
+        android:text="@string/open"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/rollButton"
         />
-
     <ImageView
         android:id="@+id/cloche"
         android:layout_width="420dp"
@@ -259,16 +235,5 @@
         app:srcCompat="@drawable/empty"
         android:layout_centerHorizontal="true"
         android:layout_centerInParent="true"/>
-
-    <Button
-        android:id="@+id/rbsd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/to_rbsd"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="24dp"
-        android:layout_marginStart="16dp"/>
-
 
 </RelativeLayout>

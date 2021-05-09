@@ -1,5 +1,6 @@
 package com.example.liarsdice
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.Toast
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         displayAmount(displayDice)
+        val zeros = arrayOf<Int?>(0,0,0,0,0,0)
 
         binding.rollButton.setOnClickListener {
             val toast = Toast.makeText(this, "Dice Rolled!", Toast.LENGTH_SHORT)
@@ -32,7 +34,13 @@ class MainActivity : AppCompatActivity() {
             diceRemoveSort = removeDice() as List<Int>
 
             displayDice= rollDice()
-            displayAmount(displayDice)
+            if (binding.autoCover.isChecked) {
+                binding.cloche.setImageResource(R.drawable.cloche)
+                opened = false
+                displayAmount(zeros)
+            } else {
+                displayAmount(displayDice)
+            }
 
         }
         binding.zai.setOnClickListener {
@@ -40,7 +48,7 @@ class MainActivity : AppCompatActivity() {
         }
         binding.hideOrCover.setOnClickListener {
             if (opened) {
-                val zeros = arrayOf<Int?>(0,0,0,0,0,0)
+                /*val zeros = arrayOf<Int?>(0,0,0,0,0,0)*/
                 displayAmount(zeros)
                 binding.cloche.setImageResource(R.drawable.cloche)
                 opened = false
@@ -49,6 +57,10 @@ class MainActivity : AppCompatActivity() {
                 binding.cloche.setImageResource(R.drawable.empty)
                 opened = true
             }
+        }
+        binding.rbsd.setOnClickListener {
+            val intent = Intent(this, MainActivity2::class.java)
+            startActivity(intent)
         }
 
 
